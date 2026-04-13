@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SC Transportes Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="pagina_principal.html">SC<span>Transportes</span></a>
+  <a href="#contato" class="nav-link">Solicitar Vaga</a>
+</nav>
+
+<!-- LOGIN -->
+<section class="login">
+  <div class="fundo">
+    <h1 >Dados do Responsável</h1><br><br>
+    <div class="formulario">
+    <div class="form">
+      <label for="nome responsavel">Nome do Responsável</label>
+      <input type="text" name="nome responsável" id="nome-responsavel" placeholder="Ex: Ricardo Martins" required>
+    </div>
+    <div class="form">
+      <label for="CPF">CPF</label>
+      <input type="text" name="cpf responsavel" id="cpf-responsavel" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14" required>
+    </div>
+    <div class="form">
+      <label for="RG">RG</label>
+      <input type="text" id="rg-responsavel" name="rg responsavel" placeholder="00.000.000-0" maxlength="12" required>
+    </div>
+    <div class="form">
+      <label for="nascimento responsavel">Data de Nascimento</label>
+      <input type="date" name="nascimento responsavel" id="nascimento-responsavel" >
+    </div>
+    <div class="form">
+      <label for="Endereço">Endereço</label>
+      <select name="endereço" id="endereco-responsavel" required>
+        <option value="" disabled selected hidden>Selecione...</option>
+        <option value="verde">Rua Verde</option>
+        <option value="amarela">Rua Amarela</option>
+        <option value="vermelha">Rua Vermelha</option>
+        <option value="Azul">Rua Azul</option>
+      </select>
+    </div>
+    <div class="form">
+      <label for="telefone">Telefone</label>
+      <input type="tel" name="telefone cliente" id="telefone-responsavel" placeholder="(11) 12345-6789" pattern="\(\d{2}\)\s\d{4,5}-\d{4}"  required>
+    </div>
+    <div class="form">
+      <label for="email">E-mail</label>
+      <input type="email" name="email responsável" id="email-responsavel" placeholder="exemplo@email.com" required>
+    </div>
+
+    <button class="btn-enviar" >Continuar</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 <span>SCTransportes</span> · Tatuí – SP · CNPJ 00.000.000/0001-00</p>
+</footer>
+
+</body>
+</html>
