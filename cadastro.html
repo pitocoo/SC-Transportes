@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SC Transportes Login</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <script src="app.js"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="pagina_principal.html">SC<span>Transportes</span></a>
+  <a href="#contato" class="nav-link">Solicitar Vaga</a>
+</nav>
+
+<!-- LOGIN -->
+<section class="login">
+  <div class="fundo">
+    <!-- Etapa do Responsável -->
+    <div id="etapa-responsavel">
+      <h1 >Dados do Responsável</h1><br><br>
+      <div class="formulario">
+      <div class="form">
+        <label for="nome responsavel">Nome do Responsável</label>
+        <input type="text" name="nome responsável" id="nome-responsavel" placeholder="Ex: Ricardo Martins" required>
+      </div>
+      <div class="form">
+        <label for="CPF">CPF</label>
+        <input type="text" name="cpf responsavel" id="cpf-responsavel" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14" required>
+      </div>
+      <div class="form">
+        <label for="RG">RG</label>
+        <input type="text" id="rg-responsavel" name="rg responsavel" placeholder="00.000.000-0" maxlength="12" required>
+      </div>
+      <div class="form">
+        <label for="genero">Gênero</label>
+        <select name="genero" id="genero-responsavel" required>
+          <option value="" disabled selected hidden>Selecione...</option>
+          <option value="homem">Homem</option>
+          <option value="homem">Mulher</option>
+          <option value="homem">Prefiro não responder</option>
+        </select>
+      </div>
+      <div class="form">
+        <label for="nascimento responsavel">Data de Nascimento</label>
+        <input type="date" name="nascimento responsavel" id="nascimento-responsavel" >
+      </div>
+      <div class="form">
+        <label for="endereço">Endereço</label>
+        <select name="endereço" id="endereco-responsavel" required>
+          <option value="" disabled selected hidden>Selecione...</option>
+          <option value="verde">Rua Verde</option>
+          <option value="amarela">Rua Amarela</option>
+          <option value="vermelha">Rua Vermelha</option>
+          <option value="Azul">Rua Azul</option>
+        </select>
+      </div>
+      <div class="form">
+        <label for="telefone">Telefone</label>
+        <input type="tel" name="telefone cliente" id="telefone-responsavel" placeholder="(11) 12345-6789" pattern="\(\d{2}\)\s\d{4,5}-\d{4}"  required>
+      </div>
+      <div class="form">
+        <label for="email">E-mail</label>
+        <input type="email" name="email responsável" id="email-responsavel" placeholder="exemplo@email.com" required>
+      </div>
+
+      <button class="btn-continuar" onclick="irParaDependente()">Continuar</button>
+      </div>
+    </div>
+
+    <div id="etapa-dependente" style="display: none;">
+    <h1 >Dados do Dependente</h1><br><br>
+    
+    <div class="form">
+      <label for="nome responsavel">Nome do Dependente</label>
+      <input type="text" name="nome dependente" id="nome-dependente" placeholder="Ex: Ricardo Martins" required>
+    </div>
+    <div class="form">
+      <label for="nascimento responsavel">Data de Nascimento</label>
+      <input type="date" name="nascimento dependente" id="nascimento-depentente" >
+    </div>
+    <div class="form">
+      <label for="CPF">CPF</label>
+      <input type="text" name="cpf dependente" id="cpf-dependente" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14" required>
+    </div>
+    <div class="form">
+      <label for="RG">RG</label>
+      <input type="text" id="rg-dependente" name="rg dependente" placeholder="00.000.000-0" maxlength="12" required>
+    </div>
+    <div class="form">
+      <label for="parentesco">Grau de Parentesco</label>
+      <select name="grau de parentesco" id="grau-parentesco" required>
+        <option value="" disabled selected hidden>Selecione...</option>
+        <option value="Pai">Pai</option>
+        <option value="Mãe">Mãe</option>
+        <option value="Padrasto">Padrasto</option>
+        <option value="Madrasta">Madrasta</option>
+        <option value="Avô / Avó">Avô / Avó</option>
+        <option value="Tio / Tia">Tio / Tia</option>
+        <option value="Irmão / Irmã">Irmão / Irmã</option>
+        <option value="Primo / Prima">Primo / Prima</option>
+        <option value="Tutor Legal">Tutor Legal</option>
+      </select>
+    </div>
+    <div class="form">
+      <label for="endereço">Instituição de Ensino</label>
+      <select name="instituição de ensino" id="instituicao-dependente" required>
+        <option value="" disabled selected hidden>Selecione...</option>
+        <option value="escola 1">Escola 1</option>
+        <option value="escola 2">Escola 2</option>
+        <option value="escola 3">Escola 3</option>
+        <option value="escola 4">Escola 4</option>
+      </select>
+    </div>
+    <div class="form">
+      <label for="endereço">Período</label>
+      <select name="periodo do dependente" id="periodo-dependente" required>
+        <option value="" disabled selected hidden>Selecione...</option>
+        <option value="matutino">Matutino</option>
+        <option value="verpertino">Vespertino</option>
+        <option value="noturno">Noturno</option>
+        <option value="integral">Integral</option>
+      </select>
+    </div>
+    <div class="form">
+      <label for="entrada dependente" class="entrada-dependente">Horário de Entrada na Escola</label>
+      <input type="time" id="entrada-dependente" name="entrada" class="form-control" required>
+    </div>
+    <div class="form">
+      <label for="saida dependente" class="saida-dependente">Horário de Saída</label>
+      <input type="time" id="saida-dependente" name="saida" class="form-control" required>
+    </div>
+
+
+    
+    <div class="botoes">
+      <button type="button" onclick="irParaResponsavel()">Voltar</button>
+      <button type="submit">Finalizar Cadastro</button>
+    </div>
+  </div>
+
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 <span>SCTransportes</span> · Tatuí – SP · CNPJ 00.000.000/0001-00</p>
+</footer>
+
+</body>
+</html>
